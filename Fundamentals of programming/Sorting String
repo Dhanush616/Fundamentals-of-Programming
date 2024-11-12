@@ -1,0 +1,51 @@
+Description
+
+Write a program to sort a string in ascending order. Note: Do not use inbuilt functions.
+
+
+Input Format
+
+The input consists of the string s in a single line.
+
+
+Output Format
+
+Display the sorted string in ascending order.
+
+
+Sample Input 0
+
+faceprep
+
+
+Sample Output 0
+
+aceefppr
+******************************************************************************************************************************************
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        char[] arr = str.toCharArray();
+        for(int i = 0 ; i < str.length() ; i++)
+        {
+            for(int j = i+1 ; j < str.length() ; j++)
+            {
+                if(arr[i]>arr[j])
+                {
+                    char temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+        for(int i = 0 ; i < str.length() ; i++)
+        {
+            System.out.print(arr[i]);
+        }
+    }
+}

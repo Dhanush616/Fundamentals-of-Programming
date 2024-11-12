@@ -1,0 +1,52 @@
+Description
+
+Write a program to find whether the given string is a palindrome or not without using string library functions.
+
+Note: The string reads the same backward and forward.
+
+
+Input Format
+
+Input consists of 1 string.
+
+
+Output Format
+
+If the given string is a Palindrome display “Palindrome”, else display “Not a Palindrome”.
+
+
+Sample Input 0
+
+mam
+
+
+Sample Output 0
+
+Palindrome
+
+******************************************************************************************************************************************
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        String rev ="";
+        int len = str.length();
+        for(int i = len-1; i>=0 ; i--)
+        {
+            rev = rev+str.charAt(i);
+        }
+        if(str.equals(rev))
+        {
+            System.out.println("Palindrome");
+        }
+        else
+        {
+            System.out.println("Not a Palindrome");
+        }
+    }
+}
